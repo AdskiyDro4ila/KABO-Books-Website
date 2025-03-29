@@ -1,0 +1,363 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8dcda;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e8dcda;
+    animation: slideIn 0.5s ease-out;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 900;
+    color: #1d1a2f;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.language-selector {
+    position: relative;
+}
+
+.flag {
+    height: 30px;
+    width: 45px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 150px;
+    margin-top: 5px;
+    animation: scaleIn 0.2s ease-out;
+}
+
+.language-dropdown.active {
+    display: block;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-option:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+}
+
+.language-option img {
+    height: 20px;
+    width: 30px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.language-option span {
+    color: #1d1a2f;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.menu-icon span {
+    height: 3px;
+    width: 100%;
+    background-color: #1d1a2f;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover .menu-icon span {
+    background-color: #2a2542;
+}
+
+.search-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #1d1a2f;
+    box-shadow: 0 0 5px rgba(29, 26, 47, 0.2);
+}
+
+.search-button {
+    padding: 15px 25px;
+    background-color: #e8dcda;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #1d1a2f;
+}
+
+.search-button:hover .search-icon {
+    color: #e8dcda;
+}
+
+.search-icon {
+    font-size: 24px;
+    color: #1d1a2f;
+    transition: transform 0.3s ease;
+}
+
+.search-button:hover .search-icon {
+    transform: scale(1.1);
+}
+
+.content {
+    min-height: calc(100vh - 180px);
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #1d1a2f;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-menu.active {
+    right: 0;
+    animation: slideIn 0.3s ease-out;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+.nav-menu a {
+    color: #e8dcda;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #2a2542;
+    border-radius: 5px;
+    transform: translateX(5px);
+}
+
+/* Featured Books Section */
+.featured-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.book-title {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #1d1a2f;
+}
+
+.book-author {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 36px;
+    }
+    
+    .search-container {
+        bottom: 10px;
+    }
+    
+    .search-input {
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    .search-button {
+        padding: 10px 20px;
+    }
+}
+
+/* Add loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+img[src] {
+    opacity: 1;
+}
+
+/* Add subtle hover effect to all interactive elements */
+button, a {
+    transition: all 0.3s ease;
+}
+
+/* Add subtle animation to language options */
+.language-option {
+    transition: all 0.2s ease;
+}
+
+.language-option:hover {
+    transform: translateX(5px);
+}
+
+/* Add subtle animation to dropdown */
+.language-dropdown {
+    transition: all 0.3s ease;
+}
+
+.language-dropdown.active {
+    animation: scaleIn 0.2s ease-out;
+}
+
+/* Add subtle animation to search container */
+.search-container {
+    transition: all 0.3s ease;
+}
+
+.search-container:hover {
+    transform: translateY(-2px);
+}
+
+/* Add subtle animation to header */
+.header {
+    transition: all 0.3s ease;
+}
+
+.header:hover {
+    transform: translateY(-2px);
+} 
