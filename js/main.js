@@ -117,4 +117,228 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Search functionality will be implemented here. You searched for: ' + searchTerm);
         }
     });
+
+    // Cookie Consent Management
+    if (!localStorage.getItem('cookieConsent')) {
+        showCookieConsent();
+    }
+
+    initializeCookieSettings();
+});
+
+function showCookieConsent() {
+    const cookieBanner = document.getElementById('cookie-consent');
+    if (cookieBanner) {
+        cookieBanner.style.display = 'block';
+    }
+}
+
+function initializeCookieSettings() {
+    const acceptAllBtn = document.getElementById('cookie-accept-all');
+    const acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
+    const settingsBtn = document.getElementById('cookie-settings');
+    const modal = document.getElementById('cookie-settings-modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', () => {
+            acceptAllCookies();
+            hideCookieConsent();
+        });
+    }
+
+    if (acceptNecessaryBtn) {
+        acceptNecessaryBtn.addEventListener('click', () => {
+            acceptNecessaryCookies();
+            hideCookieConsent();
+        });
+    }
+
+    if (settingsBtn) {
+        settingsBtn.addEventListener('click', () => {
+            showCookieSettings();
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            hideCookieSettings();
+        });
+    }
+
+    if (modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideCookieSettings();
+            }
+        });
+    }
+}
+
+function acceptAllCookies() {
+    localStorage.setItem('cookieConsent', 'all');
+    localStorage.setItem('analyticsCookies', 'true');
+    localStorage.setItem('marketingCookies', 'true');
+    localStorage.setItem('functionalCookies', 'true');
+    initializeCookies();
+}
+
+function acceptNecessaryCookies() {
+    localStorage.setItem('cookieConsent', 'necessary');
+    localStorage.setItem('analyticsCookies', 'false');
+    localStorage.setItem('marketingCookies', 'false');
+    localStorage.setItem('functionalCookies', 'false');
+    initializeCookies();
+}
+
+function showCookieSettings() {
+    const modal = document.getElementById('cookie-settings-modal');
+    if (modal) {
+        modal.style.display = 'block';
+    }
+}
+
+function hideCookieSettings() {
+    const modal = document.getElementById('cookie-settings-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function hideCookieConsent() {
+    const cookieBanner = document.getElementById('cookie-consent');
+    if (cookieBanner) {
+        cookieBanner.style.display = 'none';
+    }
+}
+
+function initializeCookies() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent === 'all') {
+        // Initialize all cookies
+        initializeAnalytics();
+        initializeMarketing();
+        initializeFunctional();
+    } else if (consent === 'necessary') {
+        // Initialize only necessary cookies
+        initializeNecessary();
+    }
+}
+
+function initializeNecessary() {
+    // Initialize only essential cookies required for website functionality
+    console.log('Initializing necessary cookies');
+}
+
+function initializeAnalytics() {
+    // Initialize analytics cookies (e.g., Google Analytics)
+    console.log('Initializing analytics cookies');
+}
+
+function initializeMarketing() {
+    // Initialize marketing cookies
+    console.log('Initializing marketing cookies');
+}
+
+function initializeFunctional() {
+    // Initialize functional cookies
+    console.log('Initializing functional cookies');
+}
+
+// Newsletter Subscription with GDPR Compliance
+document.addEventListener('DOMContentLoaded', function() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (validateEmail(email)) {
+                subscribeToNewsletter(email);
+            }
+        });
+    }
+});
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function subscribeToNewsletter(email) {
+    // Here you would typically send this to your backend
+    // For now, we'll just show a success message
+    const form = document.querySelector('.newsletter-form');
+    const successMessage = document.createElement('p');
+    successMessage.className = 'success-message';
+    successMessage.textContent = 'Thank you for subscribing! You will receive a confirmation email shortly.';
+    form.appendChild(successMessage);
+    
+    // Clear the form
+    form.reset();
+    
+    // Remove the success message after 5 seconds
+    setTimeout(() => {
+        successMessage.remove();
+    }, 5000);
+}
+
+// Language Selection
+document.addEventListener('DOMContentLoaded', function() {
+    const languageSelector = document.querySelector('.language-selector');
+    const languageDropdown = document.getElementById('languageDropdown');
+    
+    if (languageSelector && languageDropdown) {
+        languageSelector.addEventListener('click', function() {
+            languageDropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageSelector.contains(e.target)) {
+                languageDropdown.classList.remove('active');
+            }
+        });
+
+        // Handle language selection
+        const languageOptions = document.querySelectorAll('.language-option');
+        languageOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                const selectedLang = this.getAttribute('data-lang');
+                changeLanguage(selectedLang);
+            });
+        });
+    }
+});
+
+function changeLanguage(lang) {
+    // Here you would implement language switching logic
+    console.log('Changing language to:', lang);
+    // Update the flag
+    const flag = document.getElementById('languageFlag');
+    if (flag) {
+        flag.src = `https://flagcdn.com/w80/${getFlagCode(lang)}.png`;
+    }
+}
+
+function getFlagCode(lang) {
+    const flagCodes = {
+        'en': 'gb',
+        'de': 'de',
+        'es': 'es',
+        'ru': 'ru'
+    };
+    return flagCodes[lang] || 'gb';
+}
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menu-button');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuButton && navMenu) {
+        menuButton.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    }
 }); 

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KABO Books - Your online destination for quality books across various genres">
     <title>KABO Books</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="header">
@@ -29,8 +32,8 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="logo">KABO</a>
-        <button class="menu-button">
+        <a href="index.html" class="logo">KABO</a>
+        <button class="menu-button" aria-label="Toggle navigation menu">
             <div class="menu-icon">
                 <span></span>
                 <span></span>
@@ -41,17 +44,117 @@
     
     <nav class="nav-menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="best-sellers.html">Best Sellers</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     
     <div class="content">
-        <!-- Content will be added here later -->
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Your Next Favorite Book</h1>
+                <p>Explore our vast collection of books across all genres</p>
+                <a href="categories.html" class="cta-button">Browse Collection</a>
+            </div>
+        </section>
+
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Books</h2>
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book1.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3>The Silent Echo</h3>
+                        <p class="author">by Jane Doe</p>
+                        <p class="price">€19.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book2.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3>Beyond the Horizon</h3>
+                        <p class="author">by John Smith</p>
+                        <p class="price">€22.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book3.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3>Midnight Chronicles</h3>
+                        <p class="author">by Sarah Johnson</p>
+                        <p class="price">€24.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="images/book4.jpg" alt="Book Cover">
+                    </div>
+                    <div class="book-info">
+                        <h3>The Lost Kingdom</h3>
+                        <p class="author">by Michael Brown</p>
+                        <p class="price">€18.99</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <a href="categories.html?cat=fiction" class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3>Fiction</h3>
+                </a>
+                <a href="categories.html?cat=non-fiction" class="category-card">
+                    <div class="category-icon">🧠</div>
+                    <h3>Non-Fiction</h3>
+                </a>
+                <a href="categories.html?cat=mystery" class="category-card">
+                    <div class="category-icon">🔍</div>
+                    <h3>Mystery</h3>
+                </a>
+                <a href="categories.html?cat=science-fiction" class="category-card">
+                    <div class="category-icon">🚀</div>
+                    <h3>Sci-Fi</h3>
+                </a>
+                <a href="categories.html?cat=romance" class="category-card">
+                    <div class="category-icon">❤️</div>
+                    <h3>Romance</h3>
+                </a>
+                <a href="categories.html?cat=biography" class="category-card">
+                    <div class="category-icon">👤</div>
+                    <h3>Biography</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for updates on new arrivals and special offers</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-consent">By subscribing, you agree to our <a href="privacy-policy.html">Privacy Policy</a></p>
+        </section>
     </div>
     
     <div class="search-container">
@@ -63,6 +166,124 @@
         </form>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KABO Books</h3>
+                <p>Your ultimate destination for quality books across all genres. Discover new worlds through reading.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Books</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Help & Info</h3>
+                <ul>
+                    <li><a href="shipping.html">Shipping Information</a></li>
+                    <li><a href="returns.html">Returns & Refunds</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@kabobooks.com</p>
+                <p>Phone: +44 123 456 7890</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="social-icon facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="social-icon twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="social-icon instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KABO Books. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="cookie-consent">
+        <div class="cookie-content">
+            <h3>Cookie Notice</h3>
+            <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept-all" class="cookie-button accept">Accept All</button>
+                <button id="cookie-accept-necessary" class="cookie-button necessary">Only Necessary</button>
+                <button id="cookie-settings" class="cookie-button settings">Cookie Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-settings-modal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Cookie Settings</h2>
+            <p>Manage your cookie preferences. Necessary cookies help make a website usable by enabling basic functions.</p>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <h3>Necessary Cookies</h3>
+                    <label class="toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p>These cookies are required for basic site functionality and cannot be disabled.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <h3>Analytics Cookies</h3>
+                    <label class="toggle">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p>These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <h3>Marketing Cookies</h3>
+                    <label class="toggle">
+                        <input type="checkbox" id="marketing-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p>These cookies help us personalize ads based on your browsing habits.</p>
+            </div>
+            
+            <div class="cookie-option">
+                <div class="cookie-option-header">
+                    <h3>Preferences Cookies</h3>
+                    <label class="toggle">
+                        <input type="checkbox" id="preferences-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p>These cookies enable personalized features like language preferences and remember your settings.</p>
+            </div>
+            
+            <div class="cookie-modal-buttons">
+                <button id="save-preferences" class="cookie-button save">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html> 
