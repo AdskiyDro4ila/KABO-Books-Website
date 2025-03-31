@@ -59,7 +59,7 @@ header {
     padding: 15px 40px;
     border-bottom: 1px solid #ddd;
     position: relative;
-    height: 100px;
+    height: 80px;
 }
 
 /* Language selector */
@@ -67,8 +67,8 @@ header {
     position: relative;
     z-index: 100;
     cursor: pointer;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,18 +129,14 @@ header {
     font-size: 2.5rem;
     font-weight: 700;
     color: #1a1a2e;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    line-height: 1;
 }
 
 .logo-link {
     text-decoration: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -151,8 +147,8 @@ header {
 
 /* Hamburger Menu */
 .menu-button {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     position: relative;
     cursor: pointer;
     display: flex;
@@ -377,18 +373,16 @@ footer {
 
     header {
         padding: 10px 20px;
-        height: 80px;
+        height: 70px;
     }
 
     .logo {
         font-size: 2rem;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
-    .logo-link {
-        top: 50%;
-        transform: translate(-50%, -50%);
+    .lang-selector, .menu-button {
+        width: 50px;
+        height: 50px;
     }
 
     main {
@@ -401,44 +395,6 @@ footer {
         margin: 0 15px;
         height: 100%;
         max-height: none;
-    }
-
-    .menu-button {
-        width: 60px;
-        height: 60px;
-    }
-
-    .menu-button span {
-        width: 30px;
-    }
-
-    .menu-button span:first-child {
-        top: 25px;
-    }
-
-    .menu-button span:nth-child(2) {
-        top: 33px;
-    }
-
-    .menu-button span:last-child {
-        top: 41px;
-    }
-
-    .menu-button.active span:first-child {
-        top: 41px;
-    }
-
-    .menu-button.active span:last-child {
-        top: 41px;
-    }
-
-    .lang-selector {
-        width: 60px;
-        height: 60px;
-    }
-
-    .flag-icon {
-        width: 40px;
     }
 
     .nav-menu {
@@ -470,18 +426,16 @@ footer {
     
     header {
         padding: 8px 15px;
-        height: 70px;
+        height: 60px;
     }
     
     .logo {
         font-size: 1.8rem;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 
-    .logo-link {
-        top: 50%;
-        transform: translate(-50%, -50%);
+    .lang-selector, .menu-button {
+        width: 40px;
+        height: 40px;
     }
 
     main {
@@ -498,44 +452,6 @@ footer {
 
     .welcome-message {
         margin-bottom: 10px;
-    }
-
-    .menu-button {
-        width: 50px;
-        height: 50px;
-    }
-
-    .menu-button span {
-        width: 25px;
-    }
-
-    .menu-button span:first-child {
-        top: 20px;
-    }
-
-    .menu-button span:nth-child(2) {
-        top: 28px;
-    }
-
-    .menu-button span:last-child {
-        top: 36px;
-    }
-
-    .menu-button.active span:first-child {
-        top: 36px;
-    }
-
-    .menu-button.active span:last-child {
-        top: 36px;
-    }
-
-    .lang-selector {
-        width: 50px;
-        height: 50px;
-    }
-
-    .flag-icon {
-        width: 35px;
     }
 
     .nav-menu {
