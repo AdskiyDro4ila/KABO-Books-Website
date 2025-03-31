@@ -4,264 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="KABO Books - Your online destination for quality books across various genres">
-    <title>KABO Books - Your Favorite Bookstore</title>
+    <title>KABO Books</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>KABO <span>Books</span></h1>
+    <div class="container">
+        <header>
+            <div class="logo">KABO</div>
+            <div class="lang-selector">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDYwIDMwIj48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGQ9Ik0wIDBoNjB2MzBIMHoiLz48L2NsaXBQYXRoPjxwYXR0ZXJuIGlkPSJiIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiPjxwYXRoIGQ9Ik0wIDBoMzB2MzBIMHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMCAwTDMwIDMwTTMwIDBMMCAzMCIgc3Ryb2tlPSIjY2MxIiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNMTUgMGwzMCAzME0zMCAwTDAgMzAiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE1IDB2MzBNMCAxNWg2MCIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utd2lkdGg9IjIiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSIzMCIgY2xpcC1wYXRoPSJ1cmwoI2EpIiBmaWxsPSIjMDAyNDd3Ii8+PHBhdGggZD0iTTAgMGg2MHYzMEgweiIgZmlsbD0idXJsKCNiKSIvPjxwYXRoIGQ9Ik0zMCAwTDYwIDMwTDAgMzB6IiBmaWxsPSIjY2MxIi8+PHBhdGggZD0iTTMwIDBMNjAgMzBMMCAzMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjEiLz48cGF0aCBkPSJNMzAgMGwzMCAzME0wIDMwTDMwIDB6IiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0zMCAwTDMwIDMwTTAgMTVoNjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+" alt="English" class="flag-icon">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="categories.html">Books</a></li>
-                    <li><a href="new-arrivals.html">New Arrivals</a></li>
-                    <li><a href="best-sellers.html">Best Sellers</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Discover Your Next Favorite Book</h2>
-                <p>Browse our extensive collection of books in various genres. From fiction to non-fiction, we have something for everyone.</p>
-                <a href="categories.html" class="btn">Browse Books</a>
+        <main>
+            <div class="welcome-message">
+                <h1>Find your next great read</h1>
+                <p>Ask our AI assistant for personalized book recommendations</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Featured Books Section -->
-    <section class="featured-books">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Books</h2>
-            </div>
-            <div class="books-grid">
-                <!-- Book 1 -->
-                <div class="book-card">
-                    <div class="book-img">
-                        <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="The Art of War">
-                    </div>
-                    <div class="book-info">
-                        <h3>The Art of War</h3>
-                        <p class="author">By Sun Tzu</p>
-                        <p class="price">€15.99</p>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added here by JavaScript -->
                 </div>
                 
-                <!-- Book 2 -->
-                <div class="book-card">
-                    <div class="book-img">
-                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="To Kill a Mockingbird">
-                    </div>
-                    <div class="book-info">
-                        <h3>To Kill a Mockingbird</h3>
-                        <p class="author">By Harper Lee</p>
-                        <p class="price">€12.99</p>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                
-                <!-- Book 3 -->
-                <div class="book-card">
-                    <div class="book-img">
-                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="1984">
-                    </div>
-                    <div class="book-info">
-                        <h3>1984</h3>
-                        <p class="author">By George Orwell</p>
-                        <p class="price">€14.50</p>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                
-                <!-- Book 4 -->
-                <div class="book-card">
-                    <div class="book-img">
-                        <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="The Great Gatsby">
-                    </div>
-                    <div class="book-info">
-                        <h3>The Great Gatsby</h3>
-                        <p class="author">By F. Scott Fitzgerald</p>
-                        <p class="price">€13.75</p>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="What book are you looking for?...">
+                    <button id="sendButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </main>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <div class="container">
-            <div class="section-title">
-                <h2>Browse Categories</h2>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <i>📚</i>
-                    <h3>Fiction</h3>
-                    <p>Explore imaginary worlds</p>
-                </div>
-                <div class="category-card">
-                    <i>🔍</i>
-                    <h3>Non-Fiction</h3>
-                    <p>Discover real-world knowledge</p>
-                </div>
-                <div class="category-card">
-                    <i>🧙</i>
-                    <h3>Fantasy</h3>
-                    <p>Journey to magical realms</p>
-                </div>
-                <div class="category-card">
-                    <i>🚀</i>
-                    <h3>Sci-Fi</h3>
-                    <p>Explore futuristic ideas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About KABO Books</h2>
-                    <p>KABO Books is your premier destination for quality literature. Founded in 2020, we've been dedicated to bringing the best books to our readers.</p>
-                    <p>Our mission is to foster a love for reading and make quality literature accessible to everyone. Whether you're a casual reader or a book enthusiast, KABO Books has something special for you.</p>
-                    <a href="about.html" class="btn">Learn More</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bookstore Image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>KABO Books</h3>
-                    <p>Your favorite bookstore offering the best selection of books at affordable prices.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="categories.html">Books</a></li>
-                        <li><a href="new-arrivals.html">New Arrivals</a></li>
-                        <li><a href="best-sellers.html">Best Sellers</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="shipping.html">Shipping Policy</a></li>
-                        <li><a href="returns.html">Returns & Refunds</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>123 Book Street, Reading City</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Email: info@kabobooks.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 KABO Books. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent" class="cookie-consent">
-        <div class="cookie-content">
-            <h3>Cookie Notice</h3>
-            <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
-            <div class="cookie-buttons">
-                <button id="cookie-accept-all" class="cookie-button accept">Accept All</button>
-                <button id="cookie-accept-necessary" class="cookie-button necessary">Only Necessary</button>
-                <button id="cookie-settings" class="cookie-button settings">Cookie Settings</button>
-            </div>
-        </div>
+        <footer>
+            <p>&copy; 2025 KABO Books. All rights reserved.</p>
+        </footer>
     </div>
 
-    <!-- Cookie Settings Modal -->
-    <div id="cookie-settings-modal" class="cookie-modal">
-        <div class="cookie-modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Cookie Settings</h2>
-            <p>Manage your cookie preferences. Necessary cookies help make a website usable by enabling basic functions.</p>
-            
-            <div class="cookie-option">
-                <div class="cookie-option-header">
-                    <h3>Necessary Cookies</h3>
-                    <label class="toggle">
-                        <input type="checkbox" checked disabled>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <p>These cookies are required for basic site functionality and cannot be disabled.</p>
-            </div>
-            
-            <div class="cookie-option">
-                <div class="cookie-option-header">
-                    <h3>Analytics Cookies</h3>
-                    <label class="toggle">
-                        <input type="checkbox" id="analytics-cookies">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <p>These cookies help us understand how visitors interact with our website.</p>
-            </div>
-            
-            <div class="cookie-option">
-                <div class="cookie-option-header">
-                    <h3>Marketing Cookies</h3>
-                    <label class="toggle">
-                        <input type="checkbox" id="marketing-cookies">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <p>These cookies are used to track visitors across websites to display relevant advertisements.</p>
-            </div>
-            
-            <div class="cookie-option">
-                <div class="cookie-option-header">
-                    <h3>Functional Cookies</h3>
-                    <label class="toggle">
-                        <input type="checkbox" id="functional-cookies">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <p>These cookies enable enhanced functionality and personalization.</p>
-            </div>
-            
-            <button id="save-cookie-settings" class="cookie-button accept">Save Preferences</button>
-        </div>
-    </div>
-
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html> 

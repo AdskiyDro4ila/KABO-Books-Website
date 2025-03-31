@@ -121,6 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cookie Consent Management
     if (!localStorage.getItem('cookieConsent')) {
         showCookieConsent();
+    } else {
+        initializeCookies();
     }
 
     initializeCookieSettings();
@@ -222,6 +224,16 @@ function initializeCookies() {
     } else if (consent === 'necessary') {
         // Initialize only necessary cookies
         initializeNecessary();
+    } else if (consent === 'custom') {
+        if (localStorage.getItem('analyticsCookies') === 'true') {
+            initializeAnalytics();
+        }
+        if (localStorage.getItem('marketingCookies') === 'true') {
+            initializeMarketing();
+        }
+        if (localStorage.getItem('functionalCookies') === 'true') {
+            initializeFunctional();
+        }
     }
 }
 
@@ -340,5 +352,97 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
             this.classList.toggle('active');
         });
+    }
+});
+
+// Hamburger menu functionality
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+const overlay = document.getElementById('overlay');
+
+menuToggle.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', function() {
+    navMenu.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+// Filter chips functionality
+const chips = document.querySelectorAll('.chip');
+
+chips.forEach(chip => {
+    chip.addEventListener('click', function() {
+        // Remove active class from all chips
+        chips.forEach(c => c.classList.remove('active'));
+        // Add active class to clicked chip
+        this.classList.add('active');
+    });
+});
+
+// Accept all cookies
+document.getElementById('cookie-accept-all').addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'all');
+    hideCookieConsent();
+    initializeCookies();
+});
+
+// Accept only necessary cookies
+document.getElementById('cookie-accept-necessary').addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'necessary');
+    hideCookieConsent();
+    initializeCookies();
+});
+
+// Show cookie settings modal
+document.getElementById('cookie-settings').addEventListener('click', function() {
+    const modal = document.getElementById('cookie-settings-modal');
+    modal.style.display = 'block';
+});
+
+// Close cookie settings modal
+document.querySelector('.close-modal').addEventListener('click', function() {
+    const modal = document.getElementById('cookie-settings-modal');
+    modal.style.display = 'none';
+});
+
+// Save cookie settings
+document.getElementById('save-cookie-settings').addEventListener('click', function() {
+    const analytics = document.getElementById('analytics-cookies').checked;
+    const marketing = document.getElementById('marketing-cookies').checked;
+    const functional = document.getElementById('functional-cookies').checked;
+    
+    localStorage.setItem('cookieConsent', 'custom');
+    localStorage.setItem('analyticsCookies', analytics);
+    localStorage.setItem('marketingCookies', marketing);
+    localStorage.setItem('functionalCookies', functional);
+    
+    const modal = document.getElementById('cookie-settings-modal');
+    modal.style.display = 'none';
+    hideCookieConsent();
+    initializeCookies();
+});
+
+// Search functionality
+const searchInput = document.querySelector('.search-bar input');
+const searchButton = document.querySelector('.search-bar button');
+
+searchButton.addEventListener('click', function() {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm) {
+        // Implement search functionality here
+        console.log('Searching for:', searchTerm);
+    }
+});
+
+searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+            // Implement search functionality here
+            console.log('Searching for:', searchTerm);
+        }
     }
 }); 

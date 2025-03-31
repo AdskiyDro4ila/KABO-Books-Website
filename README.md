@@ -1,37 +1,40 @@
-# KABO Books Website
+# KABO Books
 
-A modern, responsive website for a book store with language selection and search functionality.
+A modern web application for personalized book recommendations using AI. Built with HTML, CSS, and JavaScript.
 
 ## Features
-- Responsive design
-- Language selection (English, German, Spanish, Russian)
-- Animated UI elements
-- Search functionality
-- Mobile-friendly interface
 
-## Project Structure
+- Clean, modern UI design
+- Responsive layout
+- Interactive chat interface
+- AI-powered book recommendations
+- Multi-language support (coming soon)
+
+## Live Demo
+
+Visit the live site at: [https://yourusername.github.io/kabo-books](https://yourusername.github.io/kabo-books)
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/kabo-books.git
 ```
-KABO Books/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-└── images/
+
+2. Navigate to the project directory:
+```bash
+cd kabo-books
 ```
 
-## How to Run
-1. Make sure you have Python 3 installed
-2. Open terminal in the project directory
-3. Run the following command:
-   ```bash
-   python3 -m http.server 8080 --bind 0.0.0.0
-   ```
-4. Open your browser and go to:
-   - Local: `http://localhost:8080`
-   - Mobile: `http://[your-computer-ip]:8080`
+3. Open `index.html` in your web browser or use a local server.
 
-## Development Notes
-- The website uses vanilla JavaScript for functionality
-- CSS animations are implemented for smooth transitions
-- Language selection affects both UI text and search placeholder 
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Google Fonts (Poppins)
+
+## License
+
+MIT License - feel free to use this project for your own purposes. 
