@@ -366,6 +366,17 @@ footer {
         font-size: 2rem;
     }
 
+    main {
+        height: calc(100vh - 130px);
+        padding: 10px 0;
+    }
+
+    .chat-container {
+        margin: 0 15px;
+        height: calc(100% - 20px);
+        max-height: none;
+    }
+
     .menu-button {
         width: 60px;
         height: 60px;
@@ -414,39 +425,6 @@ footer {
         font-size: 1rem;
     }
 
-    .chat-container {
-        margin: 0 15px;
-        height: calc(100vh - 180px);
-        max-height: none;
-    }
-
-    .chat-messages {
-        padding: 12px;
-    }
-
-    .chat-input {
-        padding: 10px;
-    }
-
-    .chat-input input {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-
-    .chat-input button {
-        width: 40px;
-        height: 40px;
-        margin-left: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .chat-input button svg {
-        width: 20px;
-        height: 20px;
-    }
-
     .message {
         padding: 8px 12px;
         font-size: 0.9rem;
@@ -471,6 +449,17 @@ footer {
     
     .logo {
         font-size: 1.8rem;
+    }
+
+    main {
+        height: calc(100vh - 120px);
+        padding: 10px 0;
+    }
+
+    .chat-container {
+        margin: 0 10px;
+        height: calc(100% - 20px);
+        border-radius: 8px;
     }
 
     .menu-button {
@@ -520,39 +509,6 @@ footer {
     .nav-menu a {
         padding: 10px 20px;
         font-size: 0.95rem;
-    }
-
-    .chat-container {
-        margin: 0 10px;
-        height: calc(100vh - 160px);
-        border-radius: 8px;
-    }
-
-    .chat-messages {
-        padding: 10px;
-    }
-
-    .chat-input {
-        padding: 8px;
-    }
-
-    .chat-input input {
-        padding: 6px 10px;
-        font-size: 0.85rem;
-    }
-
-    .chat-input button {
-        width: 35px;
-        height: 35px;
-        margin-left: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .chat-input button svg {
-        width: 18px;
-        height: 18px;
     }
 
     .message {
