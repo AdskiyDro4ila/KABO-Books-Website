@@ -12,18 +12,18 @@ A modern web application for personalized book recommendations using AI. Built w
 
 ## Live Demo
 
-Visit the live site at: [https://yourusername.github.io/kabo-books](https://yourusername.github.io/kabo-books)
+Visit the live site at: [https://adskiyDro4ila.github.io/KABO-Books-Website/](https://adskiyDro4ila.github.io/KABO-Books-Website/)
 
 ## Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/kabo-books.git
+git clone https://github.com/AdskiyDro4ila/KABO-Books-Website.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd kabo-books
+cd KABO-Books-Website
 ```
 
 3. Open `index.html` in your web browser or use a local server.
