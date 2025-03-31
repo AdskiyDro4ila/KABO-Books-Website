@@ -3,15 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const userInput = document.getElementById('userInput');
     const sendButton = document.getElementById('sendButton');
     const selectedFlag = document.getElementById('selectedFlag');
-    const langOptions = document.querySelectorAll('.lang-option');
+    const langDropdown = document.querySelector('.lang-dropdown');
+    const langFlags = document.querySelectorAll('.lang-dropdown img');
 
     // Language selection
-    langOptions.forEach(option => {
-        option.addEventListener('click', function() {
+    selectedFlag.addEventListener('click', function(e) {
+        e.stopPropagation();
+        langDropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+        langDropdown.classList.remove('active');
+    });
+
+    // Handle language selection
+    langFlags.forEach(flag => {
+        flag.addEventListener('click', function(e) {
+            e.stopPropagation();
             const lang = this.dataset.lang;
-            const flagSrc = this.querySelector('img').src;
-            selectedFlag.src = flagSrc;
-            selectedFlag.alt = this.querySelector('img').alt;
+            selectedFlag.src = this.src;
+            selectedFlag.alt = this.alt;
+            langDropdown.classList.remove('active');
             
             // Update placeholder text based on language
             switch(lang) {

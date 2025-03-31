@@ -62,6 +62,7 @@ header {
 .lang-selector {
     position: relative;
     z-index: 100;
+    cursor: pointer;
 }
 
 .lang-button {
@@ -80,9 +81,18 @@ header {
 }
 
 .flag-icon {
-    width: 24px;
+    width: 30px;
     height: auto;
-    border-radius: 2px;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+}
+
+.flag-icon:active {
+    transform: scale(0.95);
 }
 
 .arrow {
@@ -93,35 +103,36 @@ header {
 
 .lang-dropdown {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
     left: 0;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 8px 0;
-    min-width: 150px;
+    padding: 8px;
     display: none;
     animation: fadeIn 0.2s ease-out;
 }
 
-.lang-selector:hover .lang-dropdown {
-    display: block;
-}
-
-.lang-option {
-    padding: 8px 16px;
+.lang-dropdown.active {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lang-dropdown img {
+    width: 30px;
+    height: auto;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: transform 0.2s ease;
 }
 
-.lang-option:hover {
-    background-color: #f5f5f5;
+.lang-dropdown img:hover {
+    transform: scale(1.1);
 }
 
-.lang-option img {
-    margin-right: 10px;
+.lang-dropdown img:active {
+    transform: scale(0.95);
 }
 
 .logo {
