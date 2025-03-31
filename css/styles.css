@@ -59,21 +59,24 @@ header {
     position: relative;
 }
 
+/* Language selector */
 .lang-selector {
     position: relative;
     z-index: 100;
     cursor: pointer;
-    width: 30px;
-    height: 24px;
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .flag-icon {
-    width: 24px;
-    height: auto;
-    border-radius: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
     transition: transform 0.2s ease;
+    object-fit: cover;
 }
 
 .flag-icon:hover {
@@ -91,7 +94,7 @@ header {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 8px;
+    padding: 12px;
     display: none;
     animation: fadeIn 0.2s ease-out;
 }
@@ -99,15 +102,16 @@ header {
 .lang-dropdown.active {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .lang-dropdown img {
-    width: 24px;
-    height: auto;
-    border-radius: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
     cursor: pointer;
     transition: transform 0.2s ease;
+    object-fit: cover;
 }
 
 .lang-dropdown img:hover {
@@ -129,32 +133,36 @@ header {
 
 /* Hamburger Menu */
 .menu-button {
-    width: 30px;
-    height: 24px;
+    width: 110px;
+    height: 110px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-button span {
     display: block;
-    width: 100%;
-    height: 2px;
+    width: 40px;
+    height: 3px;
     background-color: #1a1a2e;
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     transition: all 0.3s ease;
 }
 
 .menu-button span:first-child {
-    top: 2px;
+    top: 43px;
 }
 
 .menu-button span:nth-child(2) {
-    top: 11px;
+    top: 53px;
 }
 
 .menu-button span:last-child {
-    bottom: 2px;
+    top: 63px;
 }
 
 .menu-button:hover span {
@@ -163,8 +171,8 @@ header {
 
 /* Menu Active State */
 .menu-button.active span:first-child {
-    transform: rotate(45deg);
-    top: 11px;
+    transform: translateX(-50%) rotate(45deg);
+    top: 53px;
 }
 
 .menu-button.active span:nth-child(2) {
@@ -172,8 +180,8 @@ header {
 }
 
 .menu-button.active span:last-child {
-    transform: rotate(-45deg);
-    bottom: 11px;
+    transform: translateX(-50%) rotate(-45deg);
+    top: 53px;
 }
 
 /* Main content styles */
