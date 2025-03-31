@@ -154,6 +154,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
 }
 
 .menu-button span {
@@ -168,15 +169,15 @@ header {
 }
 
 .menu-button span:first-child {
-    top: 33px;
+    top: 20px;
 }
 
 .menu-button span:nth-child(2) {
-    top: 43px;
+    top: 30px;
 }
 
 .menu-button span:last-child {
-    top: 53px;
+    top: 40px;
 }
 
 .menu-button:hover span {
@@ -186,7 +187,7 @@ header {
 /* Menu Active State */
 .menu-button.active span:first-child {
     transform: translateX(-50%) rotate(45deg);
-    top: 53px;
+    top: 30px;
 }
 
 .menu-button.active span:nth-child(2) {
@@ -195,7 +196,7 @@ header {
 
 .menu-button.active span:last-child {
     transform: translateX(-50%) rotate(-45deg);
-    top: 53px;
+    top: 30px;
 }
 
 /* Navigation Menu */
