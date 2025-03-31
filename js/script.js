@@ -5,15 +5,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedFlag = document.getElementById('selectedFlag');
     const langDropdown = document.querySelector('.lang-dropdown');
     const langFlags = document.querySelectorAll('.lang-dropdown img');
+    const menuButton = document.querySelector('.menu-button');
 
     // Language selection
     selectedFlag.addEventListener('click', function(e) {
         e.stopPropagation();
         langDropdown.classList.toggle('active');
+        // Close menu if open
+        menuButton.classList.remove('active');
     });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', function() {
+        langDropdown.classList.remove('active');
+    });
+
+    // Hamburger menu toggle
+    menuButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        // Close language dropdown if open
         langDropdown.classList.remove('active');
     });
 

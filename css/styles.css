@@ -63,27 +63,16 @@ header {
     position: relative;
     z-index: 100;
     cursor: pointer;
-}
-
-.lang-button {
+    width: 30px;
+    height: 24px;
     display: flex;
     align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.lang-button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .flag-icon {
-    width: 30px;
+    width: 24px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 2px;
     transition: transform 0.2s ease;
 }
 
@@ -95,15 +84,9 @@ header {
     transform: scale(0.95);
 }
 
-.arrow {
-    margin-left: 5px;
-    font-size: 10px;
-    color: #666;
-}
-
 .lang-dropdown {
     position: absolute;
-    top: calc(100% + 5px);
+    top: calc(100% + 10px);
     left: 0;
     background: white;
     border-radius: 8px;
@@ -120,9 +103,9 @@ header {
 }
 
 .lang-dropdown img {
-    width: 30px;
+    width: 24px;
     height: auto;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -144,6 +127,7 @@ header {
     transform: translateX(-50%);
 }
 
+/* Hamburger Menu */
 .menu-button {
     width: 30px;
     height: 24px;
@@ -154,7 +138,7 @@ header {
 .menu-button span {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #1a1a2e;
     position: absolute;
     left: 0;
@@ -162,20 +146,34 @@ header {
 }
 
 .menu-button span:first-child {
-    top: 0;
+    top: 2px;
 }
 
 .menu-button span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 11px;
 }
 
 .menu-button span:last-child {
-    bottom: 0;
+    bottom: 2px;
 }
 
 .menu-button:hover span {
     background-color: #666;
+}
+
+/* Menu Active State */
+.menu-button.active span:first-child {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:last-child {
+    transform: rotate(-45deg);
+    bottom: 11px;
 }
 
 /* Main content styles */
