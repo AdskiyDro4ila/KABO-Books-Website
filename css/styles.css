@@ -131,19 +131,21 @@ header {
     color: #1a1a2e;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .logo-link {
     text-decoration: none;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
 
 .logo-link:hover .logo {
-    color: #4a6fa5;
+    color: #666666;
     transition: color 0.2s ease;
 }
 
@@ -380,6 +382,13 @@ footer {
 
     .logo {
         font-size: 2rem;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo-link {
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     main {
@@ -466,6 +475,13 @@ footer {
     
     .logo {
         font-size: 1.8rem;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .logo-link {
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
     main {
