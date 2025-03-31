@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const langDropdown = document.querySelector('.lang-dropdown');
     const langFlags = document.querySelectorAll('.lang-dropdown img');
     const menuButton = document.querySelector('.menu-button');
+    const navMenu = document.querySelector('.nav-menu');
 
     // Comprehensive translations object
     const translations = {
@@ -100,7 +101,35 @@ document.addEventListener('DOMContentLoaded', function() {
     menuButton.addEventListener('click', function(e) {
         e.stopPropagation();
         this.classList.toggle('active');
+        navMenu.classList.toggle('active');
         langDropdown.classList.remove('active');
+        
+        // Prevent body scroll when menu is open
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !menuButton.contains(e.target)) {
+            navMenu.classList.remove('active');
+            menuButton.classList.remove('active');
+            langDropdown.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close menu when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            navMenu.classList.remove('active');
+            menuButton.classList.remove('active');
+            langDropdown.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     });
 
     // Handle language selection

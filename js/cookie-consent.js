@@ -115,17 +115,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cookieConsent) {
       const consentData = JSON.parse(cookieConsent);
       applyConsent(consentData);
-      banner.classList.remove('show');
+      banner.classList.add('hide');
       settingsLink.classList.add('show');
       
       // Set checkbox states
       analyticsCheckbox.checked = consentData.analytics || false;
       marketingCheckbox.checked = consentData.marketing || false;
     } else {
-      // Show banner with a slight delay
-      setTimeout(() => {
-        banner.classList.add('show');
-      }, 1000);
+      // Show banner immediately
+      banner.classList.remove('hide');
     }
   }
 
@@ -199,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setCookie('cookieConsent', JSON.stringify(consentData), 365);
     applyConsent(consentData);
-    banner.classList.remove('show');
+    banner.classList.add('hide');
     settingsLink.classList.add('show');
   });
 
@@ -213,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setCookie('cookieConsent', JSON.stringify(consentData), 365);
     applyConsent(consentData);
-    banner.classList.remove('show');
+    banner.classList.add('hide');
     settingsLink.classList.add('show');
   });
 
@@ -246,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setCookie('cookieConsent', JSON.stringify(consentData), 365);
     applyConsent(consentData);
     preferencesModal.classList.remove('show');
-    banner.classList.remove('show');
+    banner.classList.remove('hide');
     settingsLink.classList.add('show');
   });
 

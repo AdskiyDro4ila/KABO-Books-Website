@@ -10,19 +10,19 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  z-index: 9999;
+  z-index: 999999;
   font-family: 'Arial', sans-serif;
   font-size: 12px;
   line-height: 1.4;
-  transform: translateY(100%);
+  transform: translateY(0);
   transition: transform 0.3s ease-in-out;
   max-height: 60vh;
   overflow-y: auto;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.cookie-consent-banner.show {
-  transform: translateY(0);
+.cookie-consent-banner.hide {
+  transform: translateY(100%);
 }
 
 .cookie-consent-content {

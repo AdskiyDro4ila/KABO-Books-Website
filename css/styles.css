@@ -187,6 +187,53 @@ header {
     top: 53px;
 }
 
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 100px;
+    right: -300px;
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+    overflow-y: auto;
+    border-left: 1px solid #eee;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 30px;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+    background-color: #f5f5f5;
+    color: #4a6fa5;
+    border-left: 3px solid #4a6fa5;
+    padding-left: 27px;
+}
+
 /* Main content styles */
 main {
     flex: 1;
@@ -303,32 +350,204 @@ footer {
 /* Media queries */
 @media (max-width: 768px) {
     .welcome-message h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .welcome-message p {
         font-size: 1rem;
+    }
+
+    header {
+        padding: 10px 20px;
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .menu-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .menu-button span {
+        width: 30px;
+    }
+
+    .menu-button span:first-child {
+        top: 25px;
+    }
+
+    .menu-button span:nth-child(2) {
+        top: 33px;
+    }
+
+    .menu-button span:last-child {
+        top: 41px;
+    }
+
+    .menu-button.active span:first-child {
+        top: 41px;
+    }
+
+    .menu-button.active span:last-child {
+        top: 41px;
+    }
+
+    .lang-selector {
+        width: 60px;
+        height: 60px;
+    }
+
+    .flag-icon {
+        width: 40px;
+    }
+
+    .nav-menu {
+        top: 80px;
+        height: calc(100vh - 80px);
+    }
+
+    .nav-menu a {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .chat-container {
+        margin: 0 15px;
+        height: calc(100vh - 180px);
+        max-height: none;
+    }
+
+    .chat-messages {
+        padding: 12px;
+    }
+
+    .chat-input {
+        padding: 10px;
+    }
+
+    .chat-input input {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .chat-input button {
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+    }
+
+    .message {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        max-width: 85%;
     }
 }
 
 @media (max-width: 480px) {
     .welcome-message h1 {
         font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+    
+    .welcome-message p {
+        font-size: 0.9rem;
     }
     
     header {
-        padding: 15px 0;
+        padding: 8px 15px;
+        height: 70px;
     }
     
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
-    
+
+    .menu-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-button span {
+        width: 25px;
+    }
+
+    .menu-button span:first-child {
+        top: 20px;
+    }
+
+    .menu-button span:nth-child(2) {
+        top: 28px;
+    }
+
+    .menu-button span:last-child {
+        top: 36px;
+    }
+
+    .menu-button.active span:first-child {
+        top: 36px;
+    }
+
+    .menu-button.active span:last-child {
+        top: 36px;
+    }
+
+    .lang-selector {
+        width: 50px;
+        height: 50px;
+    }
+
+    .flag-icon {
+        width: 35px;
+    }
+
+    .nav-menu {
+        top: 70px;
+        height: calc(100vh - 70px);
+        width: 250px;
+    }
+
+    .nav-menu a {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
     .chat-container {
+        margin: 0 10px;
+        height: calc(100vh - 160px);
         border-radius: 8px;
     }
-    
+
     .chat-messages {
-        min-height: 250px;
+        padding: 10px;
+    }
+
+    .chat-input {
+        padding: 8px;
+    }
+
+    .chat-input input {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .chat-input button {
+        width: 35px;
+        height: 35px;
+        margin-left: 6px;
+    }
+
+    .message {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 10px 0;
+        height: 40px;
+        font-size: 0.8rem;
     }
 } 
