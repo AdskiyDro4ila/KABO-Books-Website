@@ -6,6 +6,7 @@
     <meta name="description" content="KABO Books - Your online destination for quality books across various genres">
     <title>KABO Books</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cookie-consent.css">
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,12 +17,12 @@
     <div class="container">
         <header>
             <div class="lang-selector">
-                <img src="https://flagcdn.com/w40/gb.png" alt="English" class="flag-icon" id="selectedFlag">
+                <img src="https://flagcdn.com/w80/gb.png" alt="English" class="flag-icon" id="selectedFlag">
                 <div class="lang-dropdown">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="English" data-lang="en">
-                    <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" data-lang="de">
-                    <img src="https://flagcdn.com/w40/es.png" alt="Español" data-lang="es">
-                    <img src="https://flagcdn.com/w40/ru.png" alt="Русский" data-lang="ru">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="English" data-lang="en">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Deutsch" data-lang="de">
+                    <img src="https://flagcdn.com/w80/es.png" alt="Español" data-lang="es">
+                    <img src="https://flagcdn.com/w80/ru.png" alt="Русский" data-lang="ru">
                 </div>
             </div>
             <div class="logo">KABO</div>
@@ -34,8 +35,8 @@
 
         <main>
             <div class="welcome-message">
-                <h1>Find your next great read</h1>
-                <p>Ask our AI assistant for personalized book recommendations</p>
+                <h1 data-translate="welcome.title">Find your next great read</h1>
+                <p data-translate="welcome.subtitle">Ask our AI assistant for personalized book recommendations</p>
             </div>
 
             <div class="chat-container">
@@ -53,10 +54,90 @@
         </main>
 
         <footer>
-            <p>&copy; 2025 KABO Books. All rights reserved.</p>
+            <p data-translate="footer.copyright">&copy; 2025 KABO Books. All rights reserved.</p>
         </footer>
     </div>
 
+    <!-- Include the cookie consent HTML -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-title" data-lang-key="title">Cookie Consent</div>
+            <div class="cookie-consent-text" data-lang-key="text">
+                We use cookies to improve your experience on our website. Some cookies are necessary for the website to function properly. Others help us analyze how the site is used and can be used for marketing purposes. You can choose which cookies you want to allow.
+            </div>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button class="cookie-accept-btn" data-lang-key="accept">Accept All</button>
+            <button class="cookie-decline-btn" data-lang-key="decline">Decline Non-Essential</button>
+        </div>
+        <button class="cookie-preferences-btn" data-lang-key="preferences">Edit Preferences</button>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div id="cookie-preferences-modal" class="cookie-preferences-modal">
+        <div class="cookie-preferences-content">
+            <div class="cookie-preferences-title">
+                <span data-lang-key="preferencesTitle">Cookie Preferences</span>
+                <button class="cookie-close-btn">&times;</button>
+            </div>
+            
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div class="cookie-category-title" data-lang-key="necessaryTitle">Necessary Cookies</div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="necessary-cookies" checked disabled>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-category-description" data-lang-key="necessaryDescription">
+                    These cookies are essential for the website to function properly. They enable basic functions like page navigation and access to secure areas of the website. The website cannot function properly without these cookies.
+                </div>
+            </div>
+            
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div class="cookie-category-title" data-lang-key="analyticsTitle">Analytics Cookies</div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-category-description" data-lang-key="analyticsDescription">
+                    These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website and your experience.
+                </div>
+            </div>
+            
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div class="cookie-category-title" data-lang-key="marketingTitle">Marketing Cookies</div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="marketing-cookies">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-category-description" data-lang-key="marketingDescription">
+                    These cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for the individual user.
+                </div>
+            </div>
+            
+            <div class="cookie-preferences-buttons">
+                <button class="cookie-save-preferences-btn" data-lang-key="save">Save Preferences</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Settings Button -->
+    <button id="cookie-settings-link" class="settings-link" data-lang-key="settings">Cookie Settings</button>
+
     <script src="js/script.js"></script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html> 

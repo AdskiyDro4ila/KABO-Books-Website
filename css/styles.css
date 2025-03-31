@@ -38,13 +38,15 @@ body {
     background-color: #f0e6e6;
     color: #1a1a2e;
     line-height: 1.5;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -54,9 +56,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-bottom: 1px solid #ddd;
     position: relative;
+    height: 100px;
 }
 
 /* Language selector */
@@ -64,15 +67,15 @@ header {
     position: relative;
     z-index: 100;
     cursor: pointer;
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .flag-icon {
-    width: 60px;
+    width: 50px;
     height: auto;
     border-radius: 4px;
     transition: transform 0.2s ease;
@@ -106,7 +109,7 @@ header {
 }
 
 .lang-dropdown img {
-    width: 60px;
+    width: 50px;
     height: auto;
     border-radius: 4px;
     cursor: pointer;
@@ -123,7 +126,7 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #1a1a2e;
     position: absolute;
@@ -133,8 +136,8 @@ header {
 
 /* Hamburger Menu */
 .menu-button {
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
     position: relative;
     cursor: pointer;
     display: flex;
@@ -144,7 +147,7 @@ header {
 
 .menu-button span {
     display: block;
-    width: 45px;
+    width: 35px;
     height: 3px;
     background-color: #1a1a2e;
     position: absolute;
@@ -154,15 +157,15 @@ header {
 }
 
 .menu-button span:first-child {
-    top: 43px;
+    top: 33px;
 }
 
 .menu-button span:nth-child(2) {
-    top: 53px;
+    top: 43px;
 }
 
 .menu-button span:last-child {
-    top: 63px;
+    top: 53px;
 }
 
 .menu-button:hover span {
@@ -191,21 +194,22 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 20px 0;
+    height: calc(100vh - 200px);
 }
 
 .welcome-message {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .welcome-message h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
 }
 
 .welcome-message p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
 }
 
@@ -217,42 +221,43 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-messages {
-    min-height: 300px;
-    max-height: 500px;
+    flex: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 .chat-input {
     display: flex;
     border-top: 1px solid #eee;
-    padding: 15px;
+    padding: 12px;
 }
 
 .chat-input input {
     flex: 1;
-    padding: 12px 15px;
+    padding: 10px 15px;
     border: 1px solid #ddd;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
 }
 
 .chat-input button {
     background-color: #e6d7d7;
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     margin-left: 10px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: background-color 0.3s;
+    justify-content: center;
 }
 
 .chat-input button:hover {
@@ -268,16 +273,17 @@ main {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
+    height: 50px;
     color: #777;
     font-size: 0.9rem;
 }
 
 /* Message styles */
 .message {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 10px 15px;
-    border-radius: 18px;
+    border-radius: 15px;
     max-width: 80%;
     word-wrap: break-word;
 }
@@ -289,7 +295,7 @@ footer {
 }
 
 .bot-message {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     margin-right: auto;
     border-bottom-left-radius: 4px;
 }
