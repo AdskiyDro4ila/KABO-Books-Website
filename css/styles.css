@@ -130,6 +130,9 @@ header {
     font-weight: 700;
     color: #1a1a2e;
     line-height: 1;
+    display: flex;
+    align-items: center;
+    height: 60px;
 }
 
 .logo-link {
@@ -154,7 +157,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-button span {
@@ -439,13 +443,44 @@ footer {
         height: 70px;
     }
 
-    .logo {
-        font-size: 2rem;
-    }
-
-    .lang-selector, .menu-button {
+    .lang-selector {
         width: 50px;
         height: 50px;
+    }
+
+    .flag-icon {
+        width: 40px;
+    }
+
+    .logo {
+        font-size: 2rem;
+        height: 50px;
+    }
+
+    .menu-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-button span {
+        width: 30px;
+    }
+
+    .menu-button span:first-child {
+        top: 15px;
+    }
+
+    .menu-button span:nth-child(2) {
+        top: 25px;
+    }
+
+    .menu-button span:last-child {
+        top: 35px;
+    }
+
+    .menu-button.active span:first-child,
+    .menu-button.active span:last-child {
+        top: 25px;
     }
 
     main {
