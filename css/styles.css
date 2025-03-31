@@ -437,6 +437,14 @@ footer {
         width: 40px;
         height: 40px;
         margin-left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chat-input button svg {
+        width: 20px;
+        height: 20px;
     }
 
     .message {
@@ -537,6 +545,14 @@ footer {
         width: 35px;
         height: 35px;
         margin-left: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chat-input button svg {
+        width: 18px;
+        height: 18px;
     }
 
     .message {
