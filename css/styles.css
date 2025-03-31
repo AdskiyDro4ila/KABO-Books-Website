@@ -134,6 +134,19 @@ header {
     transform: translateX(-50%);
 }
 
+.logo-link {
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.logo-link:hover .logo {
+    color: #4a6fa5;
+    transition: color 0.2s ease;
+}
+
 /* Hamburger Menu */
 .menu-button {
     width: 80px;
