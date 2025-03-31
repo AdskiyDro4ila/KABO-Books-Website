@@ -2,6 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatMessages = document.getElementById('chatMessages');
     const userInput = document.getElementById('userInput');
     const sendButton = document.getElementById('sendButton');
+    const selectedFlag = document.getElementById('selectedFlag');
+    const langOptions = document.querySelectorAll('.lang-option');
+
+    // Language selection
+    langOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const lang = this.dataset.lang;
+            const flagSrc = this.querySelector('img').src;
+            selectedFlag.src = flagSrc;
+            selectedFlag.alt = this.querySelector('img').alt;
+            
+            // Update placeholder text based on language
+            switch(lang) {
+                case 'de':
+                    userInput.placeholder = "Nach welchem Buch suchen Sie?...";
+                    break;
+                case 'es':
+                    userInput.placeholder = "¿Qué libro estás buscando?...";
+                    break;
+                case 'ru':
+                    userInput.placeholder = "Какую книгу вы ищете?...";
+                    break;
+                default:
+                    userInput.placeholder = "What book are you looking for?...";
+            }
+        });
+    });
 
     // Add initial bot message
     addMessage("Hello! I'm your KABO Books assistant. How can I help you find your next great read today?", 'bot');
